@@ -7,6 +7,10 @@
     <title>You Noob - Meme Application</title>
 
     <style>
+        :root {
+            scroll-behavior: smooth;
+        }
+
         body {
             background: #eef5f9;
             color: #3e5569;
@@ -22,6 +26,10 @@
             box-shadow: 0px 0px 10px lightgray;
             margin-bottom: 15px;
         }
+
+        li {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -30,6 +38,16 @@
     <hr><br>
 
     <div class="card">
+        <big>Topik</big>
+        <br>
+        <ul>
+            <li><a href="#pengertian">Pengertian Meme</a></li>
+            <li><a href="#konsep">Asal Usul dan Konsep</a></li>
+            <li><a href="#tujuan">Tujuan Meme</a></li>
+        </ul>
+    </div>
+
+    <div class="card" id="pengertian">
         <big>Pengertian Meme</big>
         <br>
         <p>
@@ -37,7 +55,7 @@
         </p>
     </div>
 
-    <div class="card">
+    <div class="card" id="konsep">
         <big>Asal Usul dan Konsep</big>
         <br>
         <p>
@@ -45,7 +63,7 @@
         </p>
     </div>
 
-    <div class="card">
+    <div class="card" id="tujuan">
         <big>Tujuan Meme</big>
         <br>
         <ul>
