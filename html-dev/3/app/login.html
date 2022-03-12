@@ -92,22 +92,24 @@
                         <div class="col-md-5">
                             <div class="card">
                                 <div class="card-body">
-                                    <div class="card-subtitle">
-                                        Anda perlu login untuk dapat mengupload meme anda
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="">Username</label>
-                                        <input type="text" class="form-control" placeholder="Masukkan Username">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">Password</label>
-                                        <input type="password" class="form-control" placeholder="Masukkan Password">
-                                    </div>
-
-                                    <div class="mt-4">
-                                        <button class="btn btn-default" style="width: 100%;" onclick="alert('Sorry, gagal login karena aplikasi imitasi')">Submit</button>
-                                    </div>
+                                    <form onsubmit="submit()">
+                                        <div class="card-subtitle">
+                                            Anda perlu login untuk dapat mengupload meme anda
+                                        </div>
+    
+                                        <div class="form-group">
+                                            <label for="">Username</label>
+                                            <input type="text" class="form-control" placeholder="Masukkan Username" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Password</label>
+                                            <input type="password" class="form-control" placeholder="Masukkan Password" required>
+                                        </div>
+    
+                                        <div class="mt-4">
+                                            <button class="btn btn-default" style="width: 100%;" onclick="alert('Sorry, gagal login karena aplikasi imitasi')">Submit</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -123,5 +125,12 @@
         <script src="js/waves.js"></script>
         <script src="js/sidebarmenu.js"></script>
         <script src="js/custom.js"></script>
+
+        <script>
+            function submit(e) {
+                e.preventDefault();
+                Swal.fire('', 'Fitur belum tersedia', 'info');
+            }
+        </script>
     </body>
 </html>
