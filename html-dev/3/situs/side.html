@@ -1,3 +1,89 @@
-<div>
-    SIDE
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Noob - Meme Application</title>
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+
+    <style>
+        body {
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            list-style: none;
+            margin-bottom: 8px;
+        }
+
+        li>a {
+            text-decoration: none;
+            color: gray;
+            display: block;
+            padding: 10px;
+            border-radius: 6px;
+            transition: .3s;
+            font-weight: 400;
+            align-items: center;
+            display: flex;
+        }
+
+        li>a:hover {
+            color: #26c6da;
+        }
+        
+        li>a.active {
+            background: #26c6da;
+            box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+            color: white;
+        }
+
+        li>a>i {
+            width: 32px;
+            margin-right: 8px;
+            text-align: center;
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <a target="_top" href="index.html" class="active">
+                <i class="mdi mdi-home"></i>
+                <span>Home</span>
+            </a>
+        </li>
+        <li>
+            <a target="_top" href="tentang.html">
+                <i class="mdi mdi-gauge"></i>
+                <span>Tentang</span>
+            </a>
+        </li>
+        <li>
+            <a target="_top" href="data.html">
+                <i class="mdi mdi-table"></i>
+                <span>Data</span>
+            </a>
+        </li>
+        <li>
+            <a target="_top" href="login.html">
+                <i class="mdi mdi-login"></i>
+                <span>Login</span>
+            </a>
+        </li>
+    </ul>
+
+    <script>
+        console.log(window.location);
+    </script>
+</body>
+</html>

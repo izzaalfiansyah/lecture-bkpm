@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>You Noob - Meme Application</title>
+
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <style>
+            body {
+                background: #eef5f9;
+                color: #3e5569;
+                padding: 10px;
+                padding-top: 5px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .card {
+                background: white;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0px 0px 10px lightgray;
+                margin-bottom: 15px;
+                display: block;
+                transition: .3s;
+            }
+
+            .card:hover {
+                box-shadow: 0px 0px 10px gray;
+            }
+
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .cols {
+                width: 25%;
+            }
+
+            .cols>div {
+                padding: 5px;
+            }
+
+            .meme-img {
+                width: 100%;
+                object-fit: cover;
+                height: 250px;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                background: #1e88e5;
+                border-radius: 5px;
+                color: white;
+                border: 0;
+                cursor: pointer;
+                box-shadow: 0px 0px 5px lightgray;
+            }
+
+            @media (max-width: 768px) {
+                .meme-img {
+                    height: 150px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Data</h3>
+
+        <hr />
+        <br />
+
+        <div class="row">
+            <div class="cols">
+                <div>
+                    <a class="card" href="https://cdn-brilio-net.akamaized.net/news/2019/11/27/174727/1133587-meme-lucu-sebelum-ditemukan.jpg" target="_blank">
+                        <img src="https://cdn-brilio-net.akamaized.net/news/2019/11/27/174727/1133587-meme-lucu-sebelum-ditemukan.jpg" class="meme-img" />
+                    </a>
+                </div>
+            </div>
+            <div class="cols">
+                <div>
+                    <a class="card" href="https://cdn.idntimes.com/content-images/post/20211206/foto-cover-08748af3c452249402d5ae5a96c2db0e_600x400.jpg" target="_blank">
+                        <img src="https://cdn.idntimes.com/content-images/post/20211206/foto-cover-08748af3c452249402d5ae5a96c2db0e_600x400.jpg" class="meme-img" />
+                    </a>
+                </div>
+            </div>
+            <div class="cols">
+                <div>
+                    <a class="card" href="http://c.files.bbci.co.uk/8991/production/_104871253_1a76b03a-0a86-4ee3-85de-46f66d7f179e.jpg" target="_blank">
+                        <img src="http://c.files.bbci.co.uk/8991/production/_104871253_1a76b03a-0a86-4ee3-85de-46f66d7f179e.jpg" class="meme-img" />
+                    </a>
+                </div>
+            </div>
+            <div class="cols">
+                <div>
+                    <a class="card" href="https://thumb.viva.co.id/media/frontend/thumbs3/2022/01/03/61d2a892888fa-meme-kocak-layangan-putus_1265_711.jpg" target="_blank">
+                        <img src="https://thumb.viva.co.id/media/frontend/thumbs3/2022/01/03/61d2a892888fa-meme-kocak-layangan-putus_1265_711.jpg" class="meme-img" />
+                    </a>
+                </div>
+            </div>
+            <div class="cols">
+                <div>
+                    <a class="card" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOahTA4VA6G6zafvbCQlWOXAgzsR2_JZKmzQ&usqp=CAU" target="_blank">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOahTA4VA6G6zafvbCQlWOXAgzsR2_JZKmzQ&usqp=CAU" class="meme-img" />
+                    </a>
+                </div>
+            </div>
+            <div class="cols">
+                <div>
+                    <a class="card" href="https://cdn06.pramborsfm.com/storage/app/media/tr:w-700,f-jpg/Prambors/Editorial/meme%20covid-19-20210803043532.jpg" target="_blank">
+                        <img src="https://cdn06.pramborsfm.com/storage/app/media/tr:w-700,f-jpg/Prambors/Editorial/meme%20covid-19-20210803043532.jpg" class="meme-img" />
+                    </a>
+                </div>
+            </div>
+            <div class="cols">
+                <div>
+                    <a class="card" href="https://cdn-brilio-net.akamaized.net/news/2022/01/27/221707/1652786-meme-kocak-terlanjur-bucin-.jpg" target="_blank">
+                        <img src="https://cdn-brilio-net.akamaized.net/news/2022/01/27/221707/1652786-meme-kocak-terlanjur-bucin-.jpg" class="meme-img" />
+                    </a>
+                </div>
+            </div>
+            <div class="cols">
+                <div>
+                    <a class="card" href="https://cdn.idntimes.com/content-images/post/20211109/memewkwk-1635397803683-c6b2336a7a5222283e38595d4c310d01-7185b6815d2f213371cc1193acf01c37-5b5750be1df084d5b951d659602a8900_600x400.jpg" target="_blank">
+                        <img src="https://cdn.idntimes.com/content-images/post/20211109/memewkwk-1635397803683-c6b2336a7a5222283e38595d4c310d01-7185b6815d2f213371cc1193acf01c37-5b5750be1df084d5b951d659602a8900_600x400.jpg" class="meme-img" />
+                    </a>
+                </div>
+            </div>
+            <div class="cols">
+                <div>
+                    <a class="card" href="https://www.yangpentinghepi.com/assets/picture/medium/2022/Maret/Artikel/Meme%20Kocak/2.jpg" target="_blank">
+                        <img src="https://www.yangpentinghepi.com/assets/picture/medium/2022/Maret/Artikel/Meme%20Kocak/2.jpg" class="meme-img" />
+                    </a>
+                </div>
+            </div>
+            <div class="cols">
+                <div>
+                    <a class="card" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuzeQMm6MPiCpYwTh_Mk3KhU6QJo6aFKZAAxTlIKFJskBY1RycmAbtcRfKpkiFIdelSyY&usqp=CAU" target="_blank">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuzeQMm6MPiCpYwTh_Mk3KhU6QJo6aFKZAAxTlIKFJskBY1RycmAbtcRfKpkiFIdelSyY&usqp=CAU" class="meme-img" />
+                    </a>
+                </div>
+            </div>
+            <div class="cols">
+                <div>
+                    <a class="card" href="https://cdn.idntimes.com/content-images/post/20220120/7-afc6864f444fce766440c30486ddc3d0.jpg" target="_blank">
+                        <img src="https://cdn.idntimes.com/content-images/post/20220120/7-afc6864f444fce766440c30486ddc3d0.jpg" class="meme-img" />
+                    </a>
+                </div>
+            </div>
+            <div class="cols">
+                <div>
+                    <a class="card" href="https://cdn-brilio-net.akamaized.net/news/2022/01/27/221707/1652783-1000xauto-meme-kocak-terlanjur-bucin-.jpg" target="_blank">
+                        <img src="https://cdn-brilio-net.akamaized.net/news/2022/01/27/221707/1652783-1000xauto-meme-kocak-terlanjur-bucin-.jpg" class="meme-img" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div align="center">
+            <button class="btn" onclick="Swal.fire('', 'Fitur belum tersedia', 'info')">Lihat Lainnya</button>
+        </div>
+    </body>
+</html>
