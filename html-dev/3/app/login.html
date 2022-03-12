@@ -92,7 +92,7 @@
                         <div class="col-md-5">
                             <div class="card">
                                 <div class="card-body">
-                                    <form onsubmit="submit()">
+                                    <form>
                                         <div class="card-subtitle">
                                             Anda perlu login untuk dapat mengupload meme anda
                                         </div>
@@ -107,7 +107,7 @@
                                         </div>
     
                                         <div class="mt-4">
-                                            <button class="btn btn-default" style="width: 100%;" onclick="alert('Sorry, gagal login karena aplikasi imitasi')">Submit</button>
+                                            <button type="submit" class="btn btn-default" style="width: 100%;">Submit</button>
                                         </div>
                                     </form>
                                 </div>
@@ -125,12 +125,15 @@
         <script src="js/waves.js"></script>
         <script src="js/sidebarmenu.js"></script>
         <script src="js/custom.js"></script>
-
+        
+        <script src="http://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script>
-            function submit(e) {
+            function submitted(e) {
                 e.preventDefault();
                 Swal.fire('', 'Fitur belum tersedia', 'info');
             }
+
+            document.querySelector('form').addEventListener('submit', submitted);
         </script>
     </body>
 </html>
