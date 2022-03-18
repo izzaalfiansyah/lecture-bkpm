@@ -1,0 +1,16 @@
+{
+    "name": "izzaalfiansyah/bkpm",
+    "authors": [
+        {
+            "name": "Muhammad Izza Alfiansyah",
+            "email": "iansyah724@gmail.com"
+        }
+    ],
+    "require": {},
+    "config": {
+        "process-timeout": 0
+    },
+    "scripts": {
+        "serve": "php -S localhost:8000 -t ./html-dev"
+    }
+}

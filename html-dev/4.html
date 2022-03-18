@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi</title>
+
+    <style>
+        .flex {
+            padding: 30px;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <div style="width: 50%;">
+            <h3>Formulir Pendaftaran</h3>
+            <form action="" method="POST">
+                <fieldset>
+                    <legend>Silahkan isi formulir</legend>
+                    <table border="0">
+                        <tr>
+                            <td>NIK</td>
+                            <td><input type="text" placeholder="Masukkan Nomor KTP" class="only-number" required minlength="16" maxlength="16"></td>
+                        </tr>
+                        <tr>
+                            <td>Nama</td>
+                            <td><input type="text" placeholder="Masukkan Nama" required></td>
+                        </tr>
+                        <tr>
+                            <td>Jenis Kelamin</td>
+                            <td>
+                                <input type="radio" name="jenis_kelamin"> Laki-laki
+                                <input type="radio" name="jenis_kelamin"> Perempuan
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Tanggal Lahir</td>
+                            <td>
+                                <input type="date" required max="2005-03-18">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Agama</td>
+                            <td>
+                                <select name="agama">
+                                    <option value="">Islam</option>
+                                    <option value="">Protestan</option>
+                                    <option value="">Katolik</option>
+                                    <option value="">Hindu</option>
+                                    <option value="">Budha</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Tinggi Badan</td>
+                            <td><input type="number" min="130" max="210" style="width: 200px" placeholder="Masukkan Tinggi Badan (cm)"></td>
+                        </tr>
+                        <tr>
+                            <td>Hobi</td>
+                            <td>
+                                <input type="checkbox" name="membaca"> Membaca
+                                <input type="checkbox" name="mendaki"> Mendaki
+                                <input type="checkbox" name="olahraga"> Olahraga
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Telepon</td>
+                            <td><input type="tel" placeholder="Masukkan Telepon (format: 08xxxxxxxxxx)" class="only-number" maxlength="13" style="width: 280px"></td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td><input type="email" placeholder="Masukkan Email" style="width: 280px"></td>
+                        </tr>
+                        <tr>
+                            <td>Alamat Lengkap</td>
+                            <td><textarea cols="30" rows="4" placeholder="Masukkan Alamat Lengkap"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>Username</td>
+                            <td><input type="text" minlength="5" maxlength="12" placeholder="Masukkan Username"></td>
+                        </tr>
+                        <tr>
+                            <td>Password</td>
+                            <td><input type="password" placeholder="Masukkan Password"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="submit" value="Submit">
+                                <input type="reset" value="Cancel">
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.only-number').forEach((el) => {
+            function onlyNumber(e) {
+                const newValue = e.target.value.replace(/[^,\d]/, '');
+                e.target.value = newValue;
+            }
+
+            el.addEventListener('keyup', onlyNumber);
+        });
+    </script>
+</body>
+</html>
