@@ -1,0 +1,106 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: rgb(227, 242, 247);
+}
+
+header, nav, main, .card {
+    background: white;
+    box-shadow: 0px 3px 10px gray;
+    color: rgb(63, 63, 63);
+}
+
+header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+header h2 {
+    margin-left: 20px;
+}
+
+nav {
+    height: calc(100vh - 150px);
+    border-radius: 5px;
+    overflow-y: scroll;
+    padding: 26px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+    padding-right: 10px;
+    margin-bottom: 8px;
+}
+
+nav a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    transition: .2s;
+    width: 100%;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: rgb(204, 231, 240);
+}
+
+nav .fa {
+    width: 24px;
+}
+
+section {
+    padding: 14px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main {
+    background: transparent;
+    box-shadow: 0 0 0 transparent;
+    float: right;
+    width: calc(100% - 20px);
+    border-radius: 5px;
+}
+
+.card {
+    border-radius: 5px;
+    max-width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.top-nav {
+    float: right;
+    width: 50%;
+    display: flex;
+    justify-content: end;
+}
+
+.top-nav a {
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.top-nav a:hover {
+    color: blue;
+}
+
+footer {
+    text-align: right;
+    padding: 20px;
+}

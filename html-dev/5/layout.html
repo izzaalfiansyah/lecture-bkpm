@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout BKPM 5</title>
+
+    <style>
+        body {
+            background-color: burlywood;
+            margin: 10px auto;
+            width: 750px;
+        }
+
+        header {
+            height: 120px;
+            background-color: wheat;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: saddlebrown;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: wheat;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .topnav a:hover {
+            background-color: wheat;
+            color: saddlebrown;
+        }
+
+        .column {
+            float: left;
+            padding: 0px;
+        }
+
+        .column.side {
+            width: 25%;
+            background-color: wheat;
+        }
+
+        .column.middle {
+            width: 50%;
+        }
+
+        footer {
+            clear: both;
+            height: 20px;
+            background-color: saddlebrown;
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+
+    <div class="topnav">
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+    </div>
+
+    <div class="column side">
+        <h2>Side</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eaque dolores incidunt officiis exercitationem deserunt, esse fugit id, autem temporibus quia aperiam dolor libero tempore ipsum? Dolorem numquam tempora magnam.</p>
+    </div>
+
+    <div class="column middle">
+        <h2>Kolom 2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa esse amet obcaecati, natus cupiditate deserunt expedita quia ut. Tempora illum adipisci fugit beatae veniam accusamus aliquid laboriosam numquam! Eveniet, tempore.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, quasi quae aut harum corrupti vitae enim aperiam incidunt nostrum iste nesciunt, voluptatibus delectus recusandae dolorum natus accusantium labore quas velit.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum odio ratione doloribus ipsam dolor mollitia nesciunt labore nemo iure soluta illum dignissimos sapiente numquam amet, adipisci praesentium error eum eaque.</p>
+    </div>
+
+    <div class="column side">
+        <h2>Side</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nisi magni quae, error quasi nemo quam fugit repudiandae velit ea, libero praesentium doloribus aliquid? Accusantium tempora quo laudantium nostrum illo?</p>
+    </div>
+
+    <footer>footer</footer>
+</body>
+</html>
