@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png">
     <title>Maafin aku ya Sayang</title>
 
     <style>
+        body {
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
         .flex-center {
             align-items: center;
             display: flex;
@@ -25,11 +31,16 @@
             font-size: 16px;
             margin: 4px 2px;
             cursor: pointer;
+            transition: .1s;
         }
 
         #gif {
             height: 300px;
             width: 300px;
+        }
+
+        #iya:focus, #iya:hover {
+            background: lightblue;
         }
 
         #gamau {
@@ -42,9 +53,12 @@
     <div class="flex-center">
         <div align="center">
             <img src="https://c.tenor.com/1Si3A6alsiEAAAAi/pentol-quby.gif" id="gif">
-            <h1>Maafin aku ya Sayaaang...!</h1>
+            <h1 id="all-text">
+                Maafin aku ya Sayaaang...!
+            </h1>
             <div>
                 <button id="iya">Iya Sayangkuh</button>
+                <br>
                 <button id="gamau">Gamau</button>
             </div>
         </div>
@@ -53,20 +67,24 @@
     <script>
         document.getElementById('iya').addEventListener('click', () => {
             document.getElementById('gif').src = 'https://s3.getstickerpack.com/storage/uploads/sticker-pack/quby-pentol-gif/sticker_11.gif?afb050261cc5640e21ce2eb44043c17a';
+            document.getElementById('iya').remove();
+            document.getElementById('gamau').remove();
+            document.getElementById('all-text').innerHTML = 'Yeeyyy dimaafin ayang...!';
         });
 
-        document.getElementById('gamau').addEventListener('mouseenter', () => {
+        function gamauEvent() {
             const gamau = document.getElementById('gamau');
             gamau.style.position = 'absolute';
-            gamau.style.top = Math.random() * 90 + '%';
-            gamau.style.left = Math.random() * 90 + '%';
+            gamau.style.top = Math.random() * 85 + '%';
+            gamau.style.left = Math.random() * 85 + '%';
+        }
+
+        document.getElementById('gamau').addEventListener('mouseenter', () => {
+            gamauEvent();
         });
 
         document.getElementById('gamau').addEventListener('click', () => {
-            const gamau = document.getElementById('gamau');
-            gamau.style.position = 'absolute';
-            gamau.style.top = Math.random() * 90 + '%';
-            gamau.style.left = Math.random() * 90 + '%';
+            gamauEvent();
         });
     </script>
 </body>
