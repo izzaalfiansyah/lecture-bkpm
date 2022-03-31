@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
+
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .login {
+            height: 400px;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-blue-300 to-blue-400 min-h-screen flex items-center justify-center">
+    <div class="lg:w-2/3 w-5/6 login bg-white shadow rounded flex flex-row flex-wrap">
+        <div class="lg:w-1/2 lg:block hidden">
+            <img src="https://media.istockphoto.com/photos/hands-protecting-personal-data-information-on-tablet-information-and-picture-id1325214557?b=1&k=20&m=1325214557&s=170667a&w=0&h=VV9UeVy2lFtf6Zc5Q128JUoOOmCrl4KhJVDMFSdMn_8=" class="h-full w-full object-cover rounded">
+        </div>
+        <div class="w-full lg:w-1/2 p-6 lg:p-8 flex items-center">
+            <div class="w-full text-center">
+                <div class="text-2xl mb-8">
+                    Login
+                </div>
+                <input type="text" class="w-full p-2 rounded border-2 border-gray-300 transition outline-none focus:border-blue-500 mb-3" placeholder="Username">
+                <input type="text" class="w-full p-2 rounded border-2 border-gray-300 transition outline-none focus:border-blue-500 mb-3" placeholder="Username">
+
+                <p>Belum punya akun? Klik <a href="#" class="text-blue-400">disini</a></p>
+
+                <button class="w-full bg-blue-600 hover:bg-blue-500 transition p-2 rounded mt-6 text-white outline-none focus:ring-2 focus:ring-blue-400">Login</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

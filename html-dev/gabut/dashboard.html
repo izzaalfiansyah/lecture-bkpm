@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Tailwind</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
+
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .w-320 {
+            width: 320px;
+        }
+        
+        .content {
+            width: calc(100% - 320px);
+        }
+    </style>
+</head>
+<body class="bg-blue-200 min-h-screen">
+    <div class="flex flex-wrap flex-row">
+        <div class="min-h-screen bg-white shadow lg:w-1/4 w-320 p-3 lg:relative fixed top-0 left-0" id="sidebar">
+            <a href="#" class="px-6 py-6 text-2xl block">
+                Logo Title
+            </a>
+            <ul class="mt-5 px-4">
+                <li>
+                    <a href="#" class="rounded-lg mb-2 bg-blue-400 text-white inline-block w-full p-3">
+                        <i class="fa fa-home w-6 "></i>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="rounded-lg transition hover:bg-blue-50 mb-2 text-gray-700 inline-block w-full p-3">
+                        <i class="fa fa-users w-6 "></i>
+                        Data Karyawan
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="rounded-lg transition hover:bg-blue-50 mb-2 text-gray-700 inline-block w-full p-3">
+                        <i class="fa fa-table w-6 "></i>
+                        Pengajuan Cuti
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="rounded-lg transition hover:bg-blue-50 mb-2 text-gray-700 inline-block w-full p-3">
+                        <i class="fa fa-user w-6 "></i>
+                        Profil
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="rounded-lg transition hover:bg-blue-50 mb-2 text-gray-700 inline-block w-full p-3">
+                        <i class="fa fa-lock w-6 "></i>
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="p-3 w-full lg:w-3/4">
+            <div class="py-5 px-3 font-bold text-2xl">
+                Dashboard
+            </div>
+            <div class="bg-white shadow mb-3 rounded p-6">
+                <div class="text-xl mb-3">
+                    Title
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At beatae quod fuga quam delectus esse recusandae commodi maiores, dolor provident nostrum, iure ullam magnam atque aliquam reprehenderit architecto ratione tempore?</p>
+            </div>
+            <div class="bg-white shadow mb-3 rounded p-6">
+                <div class="text-xl mb-3">
+                    Title
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At beatae quod fuga quam delectus esse recusandae commodi maiores, dolor provident nostrum, iure ullam magnam atque aliquam reprehenderit architecto ratione tempore?</p>
+            </div>
+            <div class="bg-white shadow mb-3 rounded p-6">
+                <div class="text-xl mb-3">
+                    Title
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At beatae quod fuga quam delectus esse recusandae commodi maiores, dolor provident nostrum, iure ullam magnam atque aliquam reprehenderit architecto ratione tempore?</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="fixed lg:hidden bottom-8 right-8 z-20 w-14 h-14 flex items-center rounded-full p-5 shadow-lg bg-white" onclick="toggleSidebar()">
+        <i class="fa fa-bars text-xl"></i>
+    </button>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
