@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+
+    <link rel="icon" href="https://w7.pngwing.com/pngs/244/874/png-transparent-3d-tic-tac-toe-game-multiplayer-tictactoe-artificial-intelligence-toes-game-angle-leaf.png">
+
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5/dark.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+    <style>
+        #main {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+
+        .pointer {
+            cursor: pointer;
+        }
+
+        .text-xxl {
+            font-size: 6rem;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body class="bg-gray-800 min-h-screen flex justify-center items-center">
+    <div class="bg-gray-700 p-6 shadow-lg rounded text-center" id="main">
+        <div class="text-xl lg:text-2xl text-white">TIC TAC TOE</div>
+        <div class="text-xs lg:text-sm text-white mb-4">
+            Sekarang giliran Pemain: <div class="inline" id="player"></div>
+        </div>
+
+        <table class="border-collapse rounded">
+            <tr>
+                <td class="h-20 lg:h-40 w-20 lg:w-40 border border-gray-800 hover:bg-gray-800 lg:text-5xl text-2xl transition pointer"></td>
+                <td class="h-20 lg:h-40 w-20 lg:w-40 border border-gray-800 hover:bg-gray-800 lg:text-5xl text-2xl transition pointer"></td>
+                <td class="h-20 lg:h-40 w-20 lg:w-40 border border-gray-800 hover:bg-gray-800 lg:text-5xl text-2xl transition pointer"></td>
+            </tr>
+            <tr>
+                <td class="h-20 lg:h-40 w-20 lg:w-40 border border-gray-800 hover:bg-gray-800 lg:text-5xl text-2xl transition pointer"></td>
+                <td class="h-20 lg:h-40 w-20 lg:w-40 border border-gray-800 hover:bg-gray-800 lg:text-5xl text-2xl transition pointer"></td>
+                <td class="h-20 lg:h-40 w-20 lg:w-40 border border-gray-800 hover:bg-gray-800 lg:text-5xl text-2xl transition pointer"></td>
+            </tr>
+            <tr>
+                <td class="h-20 lg:h-40 w-20 lg:w-40 border border-gray-800 hover:bg-gray-800 lg:text-5xl text-2xl transition pointer"></td>
+                <td class="h-20 lg:h-40 w-20 lg:w-40 border border-gray-800 hover:bg-gray-800 lg:text-5xl text-2xl transition pointer"></td>
+                <td class="h-20 lg:h-40 w-20 lg:w-40 border border-gray-800 hover:bg-gray-800 lg:text-5xl text-2xl transition pointer"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+<script>
+    var player = 'X';
+    var cells = document.querySelectorAll('td');
+    var draw = false;
+
+    const winner = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6]
+    ]
+
+    function render() {
+        var playerEl = document.getElementById('player');
+        playerEl.innerHTML = `<span class="${player == 'X' ? 'text-red-500' : 'text-green-400'}">${player}</span>`;
+
+        // cek jika imbang
+        count = 0;
+
+        cells.forEach(el => {
+            if (el.innerText) {
+                count += 1;
+            }
+        });
+
+        if (count >= cells.length) {
+            draw = true;
+        }
+
+        if (draw) {
+            Swal.fire({
+                title: 'Draw!',
+                text: 'Tidak ada yang menang!',
+                icon: 'info',
+                confirmButtonText: 'OK'
+            }).then(() => {
+                window.location.reload();
+            });
+        }
+
+        // cek jika menang
+        for (var i = 0; i < winner.length; i++) {
+            const a = winner[i][0];
+            const b = winner[i][1];
+            const c = winner[i][2];
+
+            const aEl = cells[a].innerText;
+            const bEl = cells[b].innerText;
+            const cEl = cells[c].innerText;
+
+            if (aEl == bEl && bEl == cEl && aEl != '') {
+                Swal.fire({
+                    title: 'Selamat!',
+                    text: `Player ${player == 'X' ? 'O' : 'X'} menang!`,
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                }).then(() => {
+                    window.location.reload();
+                });
+            }
+        }
+    }
+
+    function handleClick(el) {
+        el.innerHTML = `<span class="${player == 'X' ? 'text-red-500' : 'text-green-400'}">${player}</span>`;
+        player = 'X' == player ? 'O' : 'X';
+    }
+    
+    cells.forEach(el => {
+        el.addEventListener('click', () => {
+            if (!el.innerText) {
+                handleClick(el);
+                render();
+            }
+        });
+    });
+
+    render();
+</script>
+
+</html>
