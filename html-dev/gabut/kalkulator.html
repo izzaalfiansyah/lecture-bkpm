@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+            body {
+                padding: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .box {
+                border-radius: 7px;
+                box-shadow: 0px 0px 100px gray;
+                border: 1px solid gray;
+                background: white;
+                padding: 20px;
+                position: relative;
+                width: 300px;
+            }
+
+            #value {
+                width: calc(100% - 24px);
+                padding: 12px;
+                margin-bottom: 8px;
+                font-size: 20px;
+            }
+
+            button {
+                float: left;
+                display: block;
+                width: 25%;
+                height: 40px;
+                background: dodgerblue;
+                padding: 2px;
+                border: 2px solid white;
+                cursor: pointer;
+                transition: .2s;
+                font-size: 20px;
+                color: white;
+            }
+
+            button:hover {
+                background: lightskyblue;
+            }
+        </style>
+    </head>
+    <body style="background-color: lightblue;">
+        <div class="box">
+            <input type="text" id="value" disabled />
+            <button id="null" style="width: 50%;">AC</button>
+            <button class="setter">(</button>
+            <button class="setter">)</button>
+            <button class="setter">1</button>
+            <button class="setter">2</button>
+            <button class="setter">3</button>
+            <button class="setter">+</button>
+            <button class="setter">4</button>
+            <button class="setter">5</button>
+            <button class="setter">6</button>
+            <button class="setter">-</button>
+            <button class="setter">7</button>
+            <button class="setter">8</button>
+            <button class="setter">9</button>
+            <button class="setter">*</button>
+            <button id="del">&leftarrow;</button>
+            <button class="setter">0</button>
+            <button id="result">=</button>
+            <button class="setter">/</button>
+        </div>
+
+        <script>
+            var value = document.getElementById('value');
+
+            document.querySelectorAll('.setter').forEach(el => {
+                el.addEventListener('click', () => {
+                    value.value = value.value + el.innerText;
+                })
+            });
+
+            document.getElementById('null').addEventListener('click', () => {
+                value.value = '';
+            });
+
+            document.getElementById('del').addEventListener('click', () => {
+                value.value = value.value.slice(0, (value.value.length - 1));
+            });
+
+            document.getElementById('result').addEventListener('click', () => {
+                value.value = eval(value.value);
+            })
+        </script>
+    </body>
+</html>
