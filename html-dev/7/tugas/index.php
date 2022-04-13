@@ -6,43 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Registrasi</title>
     <style>
-        @layer utilities {
+        html, body {
+            scroll-behavior: smooth;
+        }
 
-            html, body {
-                scroll-behavior: smooth;
-            }
-    
-            * {
-                font-family: Arial, Helvetica, sans-serif;
-            }
-    
-            .loader {
-                animation: fade 2s both;
-                pointer-events: none;
-            }
-            
-            @keyframes fade {
-                0% {
-                    opacity: 100%;
-                }
-                
-                100% {
-                    opacity: 0;
-                }
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .loader {
+            animation: fade 2s both;
+            pointer-events: none;
+        }
+        
+        @keyframes fade {
+            0% {
+                opacity: 100%;
             }
             
-            .animate-up {
-                animation: up .5s;
+            100% {
+                opacity: 0;
             }
-    
-            @keyframes up {
-                0% {
-                    transform: translateY(100%);
-                }
-                
-                100% {
-                    transform: translateY(0);
-                }
+        }
+        
+        .animate-up {
+            animation: up .5s;
+        }
+
+        @keyframes up {
+            0% {
+                transform: translateY(100%);
+            }
+            
+            100% {
+                transform: translateY(0);
             }
         }
     </style>
